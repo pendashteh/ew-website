@@ -1,0 +1,82 @@
+---
+layout: base.njk
+---
+
+<div class="mb-2">
+  <a href="/chainference/" class="text-secondary text-decoration-none small"><i class="bi bi-arrow-left me-1"></i>All chainferences</a>
+</div>
+
+<h1 class="mb-1">{{ conference.name }} Chainference</h1>
+<p class="text-secondary mb-1">{{ conference.tagline }}</p>
+<a href="{{ conference.url }}" class="small text-decoration-none" target="_blank" rel="noopener">
+  <i class="bi bi-box-arrow-up-right me-1"></i>Official conference website
+</a>
+
+{% if content and content | trim %}
+<div class="mt-4 mb-2">{{ content | safe }}</div>
+{% endif %}
+
+<hr class="my-4">
+
+{% macro activityCard(activity) %}
+<div class="card mb-3 border-primary border-opacity-25">
+  <div class="card-body">
+    <div class="d-flex justify-content-between align-items-start gap-2 mb-1">
+      <h4 class="h6 mb-0">{{ activity.title }}</h4>
+      {% if activity.status == "upcoming" %}
+        <span class="badge text-bg-success flex-shrink-0">Upcoming</span>
+      {% elif activity.status == "happening" %}
+        <span class="badge text-bg-primary flex-shrink-0">Happening now</span>
+      {% elif activity.status == "past" %}
+        <span class="badge text-bg-secondary flex-shrink-0">Past</span>
+      {% endif %}
+    </div>
+    {% if activity.date %}
+      <p class="small text-secondary mb-1"><i class="bi bi-calendar3 me-1"></i>{{ activity.date }}</p>
+    {% endif %}
+    {% if activity.description %}
+      <p class="small mb-1">{{ activity.description }}</p>
+    {% endif %}
+    {% if activity.link %}
+      <a href="{{ activity.link }}" class="small" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-1"></i>{{ activity.link_label if activity.link_label else "More info" }}</a>
+    {% endif %}
+  </div>
+</div>
+{% endmacro %}
+
+{% if activities.before and activities.before.length %}
+<section class="mb-5">
+  <h2 class="h5 mb-3"><i class="bi bi-arrow-left-circle me-2 text-primary"></i>Before the conference</h2>
+  {% for activity in activities.before %}
+    {{ activityCard(activity) }}
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if activities.during and activities.during.length %}
+<section class="mb-5">
+  <h2 class="h5 mb-3"><i class="bi bi-broadcast me-2 text-primary"></i>During the conference</h2>
+  {% for activity in activities.during %}
+    {{ activityCard(activity) }}
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if activities.after and activities.after.length %}
+<section class="mb-5">
+  <h2 class="h5 mb-3"><i class="bi bi-arrow-right-circle me-2 text-primary"></i>After the conference</h2>
+  {% for activity in activities.after %}
+    {{ activityCard(activity) }}
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if not activities.before and not activities.during and not activities.after %}
+<p class="text-secondary">No activities listed yet. Be the first to propose one.</p>
+{% endif %}
+
+<div class="p-4 border border-primary border-opacity-25 rounded-3 text-center mt-2">
+  <h3 class="h6 mb-2">Running an activity around {{ conference.name }}?</h3>
+  <p class="small text-secondary mb-3">Submit workshops, meetups, watch parties, ideation sessions — anything that helps the community engage with this conference.</p>
+  <a href="https://github.com/electron-workshop/ew-website/issues/new?template=chainference-activity.yml&labels=chainference,{{ conference.name | urlencode }}" class="btn btn-outline-primary btn-sm">Propose an activity</a>
+</div>

@@ -21,5 +21,10 @@
     "title": "Connect",
     "href": "/connect/",
     "footer": true
+  },
+  {
+    "title": "Chainference",
+    "href": "/chainference/",
+    "footer": true
   }
 ]

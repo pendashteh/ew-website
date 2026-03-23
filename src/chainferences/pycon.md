@@ -1,44 +1,23 @@
 ---
-layout: base.njk
+layout: chainference.njk
 title: PyCon AU Chainference - Electron Workshop
+description: Community activities around Australia's flagship Python conference.
 permalink: "/chainferences/pycon/"
+conference:
+  name: PyCon AU
+  tagline: Australia's flagship Python conference
+  url: https://2026.pycon.org.au/
+activities:
+  before:
+    - title: Session Proposal Ideation — PyCon AU 2026
+      description: A collaborative online session to brainstorm talk ideas and develop proposals ahead of the PyCon AU 2026 call for papers deadline. Open to anyone interested in speaking — whether it's your first time or you're a regular speaker.
+      date: TBA — before the CFP deadline
+      status: upcoming
+      link: ""
+  after:
+    - title: Watch Party — PyCon AU 2025 Talks
+      description: Community watch party for publicly available PyCon AU 2025 recordings. We pick a selection of talks, watch together, and discuss. A great way to catch sessions you missed or re-engage with the content.
+      date: TBA
+      status: upcoming
+      link: ""
 ---
-
-# PyCon AU Chainference
-
-## Supporting the Python community through extended engagement
-
-As official sponsors of PyCon AU, Australia's flagship Python conference, we're committed to extending the value of this event through Chainference activities.
-
-## What happened at PyCon AU
-
-PyCon AU brings together Python enthusiasts from across Australia and beyond for a hybrid event featuring talks, workshops, and community networking.
-
-For more details about the conference itself, visit the [official PyCon AU website](https://2025.pycon.org.au/).
-
-## Chainference Activities
-
-### Watch Parties for Public Recordings
-
-We're organizing watch parties for publicly available PyCon AU recordings to continue the learning experience:
-
-- **Extended Reach**: Make conference content accessible to those who couldn't attend in person
-- **Community Building**: Create shared viewing experiences in local communities
-- **Continued Learning**: Keep the momentum going after the event
-
-### Upcoming Events
-
-Stay tuned for announcements of watch party locations and schedules. We'll share details here and through our community channels.
-
-## Get Involved
-
-If you're interested in:
-- Hosting a watch party in your area
-- Contributing to post-conference activities
-- Learning more about Python community events
-
-Contact us at [team@electronworkshop.com.au](mailto:team@electronworkshop.com.au).
-
-## Why Chainference for PyCon AU
-
-Chainference allows us to support the Python community's ongoing development without interfering with the conference organizers' work. By focusing on post-event engagement, we help extend the impact of PyCon AU beyond its dates.

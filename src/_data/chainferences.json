@@ -1,0 +1,23 @@
+[
+  {
+    "title": "PyCon AU",
+    "slug": "pycon",
+    "tagline": "Australia's flagship Python conference",
+    "conference_url": "https://2026.pycon.org.au/",
+    "description": "Annual gathering of the Australian Python community featuring talks, workshops, and sprints."
+  },
+  {
+    "title": "Everything Open",
+    "slug": "everything-open",
+    "tagline": "Australia's premier open-source conference",
+    "conference_url": "https://2026.everythingopen.au/",
+    "description": "Annual conference bringing together open-source enthusiasts and professionals across Australia."
+  },
+  {
+    "title": "SXSW Sydney",
+    "slug": "sxsw",
+    "tagline": "Technology, film, music and interactive media",
+    "conference_url": "https://www.sxswsydney.com/",
+    "description": "Annual festival connecting innovators across creative and technology industries."
+  }
+]

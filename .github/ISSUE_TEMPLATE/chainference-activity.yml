@@ -1,0 +1,97 @@
+name: Propose a Chainference Activity
+description: Submit a workshop, meetup, watch party, ideation session, or other community activity to be listed on a Chainference page.
+title: "[Chainference Activity] "
+labels: ["chainference", "community-submission"]
+body:
+  - type: dropdown
+    id: conference
+    attributes:
+      label: Conference
+      description: Which conference is this activity connected to?
+      options:
+        - PyCon AU
+        - Everything Open
+        - SXSW Sydney
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: phase
+    attributes:
+      label: When does this happen?
+      options:
+        - Before the conference (CFP, ideation, speaker prep)
+        - During the conference (fringe, satellite, meetup)
+        - After the conference (watch party, reflection, follow-up)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Activity type
+      options:
+        - Watch party
+        - Ideation / CFP session
+        - Workshop
+        - Meetup
+        - Online event
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      placeholder: e.g. PyCon AU 2026 Talk Proposal Ideation
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is this activity? Who is it for? What will people do or get out of it?
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: Date and time
+      placeholder: e.g. Saturday 12 July 2026, 2pm AEST — or "TBA"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: Format
+      options:
+        - Online
+        - In-person
+        - Hybrid
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: City/venue for in-person or hybrid events. Leave blank for online-only.
+      placeholder: e.g. Melbourne CBD, or online via Jitsi
+
+  - type: input
+    id: link
+    attributes:
+      label: Link or registration URL
+      description: Where can people find out more or sign up?
+      placeholder: https://...
+
+  - type: input
+    id: contact
+    attributes:
+      label: Your name or contact (optional)
+      description: So we can reach out if we have questions before listing it.

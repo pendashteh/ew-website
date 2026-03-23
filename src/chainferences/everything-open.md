@@ -1,45 +1,30 @@
 ---
-layout: base.njk
+layout: chainference.njk
 title: Everything Open Chainference - Electron Workshop
+description: Community activities around Australia's premier open-source conference.
 permalink: "/chainferences/everything-open/"
+conference:
+  name: Everything Open
+  tagline: Australia's premier open-source conference
+  url: https://everythingopen.au/
+activities:
+  before:
+    - title: Session Proposal Ideation — Everything Open 2023 & 2025
+      description: We facilitated grassroots ideation sessions ahead of the calls for papers for the 2023 and 2025 editions, helping potential speakers develop and refine their ideas before submitting.
+      date: 2023 and 2025
+      status: past
+  during:
+    - title: Linux Victoria Breakfast
+      description: A casual breakfast open to locals on the second morning of the conference — a low-key space to connect with other attendees.
+      date: Everything Open 2026, Canberra
+      status: past
+    - title: Fringe Event
+      description: A community gathering on the Saturday after the conference to extend discussions, share reflections, and keep the momentum going.
+      date: Saturday after Everything Open 2026
+      status: past
+  after:
+    - title: Watch Party — Everything Open Talks
+      description: Watch parties for publicly available recordings from Everything Open, creating shared learning experiences and introducing the conference to new audiences.
+      date: TBA
+      status: upcoming
 ---
-
-# Everything Open Chainference
-
-Everything Open is approaching, and we're excited to support this premier open-source conference through Chainference initiatives that complement the main event.
-
-## About Everything Open
-
-Everything Open is held annually, bringing together open-source enthusiasts and professionals.
-
-Next conference will be held in Canberra in January 2026, for details visit the [official Everything Open website](https://2026.everythingopen.au/).
-
-## Chainference Activities
-
-### Past Support
-- **Call for Submissions Assistance**: We helped facilitate grassroots ideation for Everything Open 2023 and 2025, supporting potential speakers in developing their proposals
-- **Community Engagement**: Connected contributors with the open-source community to strengthen submissions
-
-### Upcoming for 2026
-- **Fringe Event**: Saturday after the conference - A community gathering to extend discussions and networking
-- **Linux Victoria Breakfast**: Open to locals on the 2nd morning of the conference - A casual meetup for regional attendees
-
-### Post-Conference Activities
-- Watch parties for publicly available recordings
-- Local meetups to discuss key takeaways
-- Continued support for open-source initiatives inspired by the conference
-
-## Get Involved
-
-Whether you're attending Everything Open or following along remotely, there are ways to participate in Chainference activities:
-
-- Join the fringe event
-- Attend the breakfast meetup
-- Help organize local watch parties
-- Contribute to post-conference discussions
-
-Contact us at [team@electronworkshop.com.au](mailto:team@electronworkshop.com.au) to get involved.
-
-## Our Commitment
-
-Through Chainference, we aim to increase the overall value of Everything Open for its community by supporting activities that extend beyond the conference dates while fully respecting the organizers' vision and execution.
