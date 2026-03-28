@@ -13,10 +13,16 @@ permalink: "/network/"
 
 <style>
   .offering-logo { max-height: 36px; width: auto; }
+  .provider-logo { max-height: 20px; width: auto; object-fit: contain; }
 </style>
 
-<h2 class="fs-4 fw-semibold mb-1 border-bottom border-2 border-primary d-inline-block">Network Offerings</h2>
-<p class="text-secondary mb-4 mt-2">Tools and services available to network members — open-source, self-hosted, and built for community use.</p>
+<h2 class="fs-4 fw-semibold mb-1 border-bottom border-2 border-primary d-inline-block">Offerings</h2>
+<p class="text-secondary mb-1 mt-2">Offerings are tools and services that providers in the network make available to community groups — open-source, self-hosted, and built for community use.</p>
+<p class="text-secondary mb-4">
+  <strong>You don't need to be a network member to access these.</strong>
+  Any community group or non-profit can engage directly with a provider.
+  Network membership brings additional benefits — but the offerings themselves are open.
+</p>
 
 <div class="row g-4 mb-5">
   {% for item in offerings %}
@@ -32,6 +38,25 @@ permalink: "/network/"
             <h2 class="h5 mb-0">{{ item.title }}</h2>
           </div>
           <p class="flex-grow-1 text-secondary">{{ item.text }}</p>
+
+          {% if item.providers and item.providers.length > 0 %}
+            <div class="border-top pt-2 mt-2 mb-3">
+              <p class="text-muted mb-2" style="font-size:.72rem; text-transform:uppercase; letter-spacing:.06em;">Provided by</p>
+              <div class="d-flex flex-wrap gap-3 align-items-center">
+                {% for provider in item.providers %}
+                  <div class="d-flex align-items-center gap-1">
+                    {% if provider.logo %}
+                      <img src="{{ provider.logo }}" alt="{{ provider.name }}" class="provider-logo">
+                    {% else %}
+                      <span class="small fw-semibold text-dark">{{ provider.name }}</span>
+                    {% endif %}
+                    <span class="text-muted" style="font-size:.68rem;">({{ provider.role }})</span>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+
           <a href="/offering/{{ item.slug }}/" class="stretched-link btn btn-outline-primary btn-sm align-self-start" aria-label="{{ item.title }}">Learn more</a>
         </div>
       </div>
@@ -40,7 +65,7 @@ permalink: "/network/"
 </div>
 
 <div class="bg-body-tertiary border border-primary border-opacity-25 rounded p-4 text-center">
-  <p class="lead mb-2 fw-semibold">Want to access network offerings or join the network?</p>
+  <p class="lead mb-2 fw-semibold">Want to join the network or become a provider?</p>
   <p class="text-secondary mb-3">Reach out — we'll figure out the right fit together.</p>
   <a href="/connect/" class="btn btn-primary">Get in Touch</a>
 </div>
