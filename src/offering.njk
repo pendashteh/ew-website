@@ -1,0 +1,82 @@
+---
+layout: base.njk
+title: Network Offerings
+description: Electron Workshop facilitates access to open-source tools for community groups — delivered by network providers who set their own terms and share our values.
+permalink: "/offering/"
+---
+<h1 class="mb-2">Network Offerings</h1>
+<p class="text-secondary mb-1">
+  Electron Workshop doesn't provide these services directly — it facilitates access to them through a network of providers who share our values.
+  Each provider sets their own terms, capacity, and pricing (including pro-bono arrangements).
+  Community groups choose who they engage with.
+</p>
+<p class="text-secondary mb-1">
+  <i class="bi bi-info-circle me-1"></i>
+  <strong>You don't need to be a network member to access these offerings.</strong>
+  They are open to any community group or non-profit that connects with a provider directly.
+  Network membership brings additional benefits — but the tools themselves are not gated.
+</p>
+<p class="mb-4">
+  <a href="/initiatives/electron-network/" class="text-primary fw-semibold">Learn about the Electron Network →</a>
+</p>
+
+<style>
+  .offering-logo{ max-height: 36px; width: auto; }
+  .provider-logo{ max-height: 22px; width: auto; object-fit: contain; }
+</style>
+
+<div class="row g-4">
+  {% for item in offerings %}
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 border-primary border-opacity-25 shadow-sm border-primary-hover">
+        <div class="card-body d-flex flex-column">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            {% if item.logo %}
+              <img src="{{ item.logo }}" alt="{{ item.title }} logo" class="offering-logo">
+            {% endif %}
+            <h2 class="h5 mb-0">{{ item.title }}</h2>
+          </div>
+          <p class="flex-grow-1">{{ item.text }}</p>
+
+          {% if item.providers and item.providers.length > 0 %}
+            <div class="border-top pt-2 mt-2 mb-3">
+              <p class="text-muted mb-2" style="font-size:.75rem; text-transform:uppercase; letter-spacing:.06em;">Provided by</p>
+              <div class="d-flex flex-wrap gap-3 align-items-center">
+                {% for provider in item.providers %}
+                  <div class="d-flex align-items-center gap-1">
+                    {% if provider.logo %}
+                      <img src="{{ provider.logo }}" alt="{{ provider.name }}" class="provider-logo">
+                    {% else %}
+                      <span class="small fw-semibold text-dark">{{ provider.name }}</span>
+                    {% endif %}
+                    <span class="text-muted" style="font-size:.7rem;">({{ provider.role }})</span>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+
+          <div>
+            <a href="/offering/{{ item.slug }}/" class="stretched-link btn btn-primary" aria-label="{{ item.title }}">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<div class="mt-5 p-4 rounded border border-primary border-opacity-25 bg-light">
+  <div class="row align-items-center g-3">
+    <div class="col-12 col-md-8">
+      <h3 class="h5 mb-1">Want to contribute to the network?</h3>
+      <p class="mb-0 text-secondary">Whether you have dev capacity, can offer hosting, funding, promotional reach, or are exploring a CSR engagement — there's a path for you.</p>
+    </div>
+    <div class="col-12 col-md-4 text-md-end">
+      <a href="/initiatives/electron-network/" class="btn btn-primary">Join the Network</a>
+    </div>
+  </div>
+</div>
+
+<div class="text-center mt-4">
+  <p class="mb-0 text-secondary">Questions? Email <strong>support[at]electronworkshop.com.au</strong></p>
+</div>

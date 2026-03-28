@@ -58,6 +58,17 @@ module.exports = function(eleventyConfig) {
     return (arr || []).filter(item => item[prop] === value);
   });
 
+// Groups an array of objects by a key, returning [{key, items}] in insertion order
+  eleventyConfig.addFilter("groupBy", function(array, key) {
+    const groups = {};
+    const order = [];
+    for (const item of (array || [])) {
+      const val = item[key] || "Unknown";
+      if (!groups[val]) { groups[val] = []; order.push(val); }
+      groups[val].push(item);
+    }
+    return order.map(val => ({ key: val, items: groups[val] }));
+  });
   return {
     dir: {
       input: "src",
