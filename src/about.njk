@@ -33,6 +33,19 @@ permalink: "/about/"
         {% endfor %}
         <p class="small text-secondary">Interested in joining? Email <strong>network[at]electronworkshop.com.au</strong></p>
       </div>
+
+      <div class="mt-5 pt-3 border-top">
+        <h2 class="h4 mb-3">Chainferences</h2>
+        <p class="text-secondary mb-4">We run community satellite gatherings alongside major open-source and technology conferences across Australia.</p>
+        {% for conf in chainferences %}
+        <div class="mb-4">
+          <h3 class="h6 fw-semibold mb-1">
+            <a href="/chainference/{{ conf.slug }}/">{{ conf.title }}</a>
+          </h3>
+          <p class="text-secondary small mb-0">{{ conf.tagline }}</p>
+        </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>

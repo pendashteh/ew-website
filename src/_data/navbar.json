@@ -1,30 +1,30 @@
 [
   {
     "title": "Home",
-    "href": "/"
+    "href": "/",
+    "icon": "bi-house"
   },
   {
     "title": "Network",
-    "href": "/network/"
+    "href": "/network/",
+    "icon": "bi-diagram-3"
   },
   {
     "title": "Calendar",
     "href": "/calendar/",
-    "footer": true
+    "footer": true,
+    "icon": "bi-calendar3"
   },
   {
     "title": "About",
     "href": "/about/",
-    "footer": true
+    "footer": true,
+    "icon": "bi-info-circle"
   },
   {
     "title": "Connect",
     "href": "/connect/",
-    "footer": true
-  },
-  {
-    "title": "Chainference",
-    "href": "/chainference/",
-    "footer": true
+    "footer": true,
+    "icon": "bi-envelope"
   }
 ]

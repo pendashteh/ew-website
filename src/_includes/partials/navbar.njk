@@ -39,7 +39,7 @@
             class="nav-link{% if page.url == item.href %} active{% endif %}"
             href="{{ item.href }}"
           >
-            {{ item.title }}
+            {% if item.icon %}<i class="bi {{ item.icon }} me-1 opacity-75" style="font-size:.85em;"></i>{% endif %}{{ item.title }}
           </a>
         </li>
         {% endfor %}
